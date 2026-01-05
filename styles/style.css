@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+}
+
+.header {
+  border-bottom: 2px solid orange;
+  background-color: grey;
+  text-align: center;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.logo {}
+
+.main {
+  height: 100%;
+  background-color: black;
+  color: white;
+}
