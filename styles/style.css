@@ -1,3 +1,15 @@
+:root {
+  --font-size: 16px;
+
+  /* Custom Portfolio Colors */
+  --bubblegum-pink: #ef476f;
+  --golden-pollen: #ffd166;
+  --emerald: #06d6a0;
+  --ocean-blue: #118ab2;
+  --dark-teal: #073b4c;
+  --regular-white: #FFFFFF;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,24 +20,39 @@ html {
 }
 
 body {
+  background-color: var(--dark-teal);
   height: 100%;
 }
 
 .header {
-  border-bottom: 2px solid orange;
-  background-color: grey;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-link {
-  color: white;
   text-decoration: none;
 }
 
-.logo {}
+.div-logo {
+  margin-left: 15px;
+}
+
+.nav-logo:hover {
+  border-radius: 50%;
+  border: var(--golden-pollen) solid 1px;
+  background-color: #ffdc8a;
+}
+
+.nav-logo-img {
+  padding: 10px;
+}
+
+.main-logo-name {
+  max-width: 80%;
+}
 
 .main {
   height: 100%;
-  background-color: black;
-  color: white;
+  text-align: center;
 }
