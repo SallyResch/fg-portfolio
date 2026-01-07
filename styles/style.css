@@ -22,6 +22,9 @@ html {
 body {
   background-color: var(--dark-teal);
   height: 100%;
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .header {
@@ -33,15 +36,6 @@ body {
 .nav-link {
   text-decoration: none;
   color: var(--regular-white);
-  padding: 20px;
-  width: 200px;
-  aspect-ratio: 1;
-  --o: calc(50%*tan(-22.5deg));
-  clip-path: polygon(var(--o) 50%, 50% var(--o),
-      calc(100% - var(--o)) 50%,
-      50% calc(100% - var(--o)));
-  background: var(--golden-pollen);
-  color: var(--dark-teal);
 }
 
 .div-logo {
@@ -59,14 +53,24 @@ body {
 }
 
 .nav-logo-img {
-  width: 50%;
+  width: 60%;
 }
 
 .main-logo-name {
   max-width: 50%;
+  height: 40%;
 }
 
 .main {
   height: 100%;
   text-align: center;
+}
+
+.main-header-profession {
+  color: var(--emerald);
+}
+
+.main-paragraph-description {
+  color: var(--regular-white);
+  font-size: 20px;
 }
