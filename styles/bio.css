@@ -1,0 +1,8 @@
+.bio {
+    background-color: var(--regular-white);
+    padding: 0 15%;
+}
+
+.main-header-bio {
+    color: var(--dark-teal);
+}
