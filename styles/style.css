@@ -33,9 +33,14 @@ body {
   align-items: center;
 }
 
+.nav {
+  display: flex;
+}
+
 .nav-link {
   text-decoration: none;
   color: var(--regular-white);
+  margin-left: 10px;
 }
 
 .div-logo {
@@ -74,3 +79,5 @@ body {
   color: var(--regular-white);
   font-size: 20px;
 }
+
+@media screen and (min-width: 768px) {}
