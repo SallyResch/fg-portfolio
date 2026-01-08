@@ -22,8 +22,8 @@ html {
 body {
   background-color: var(--dark-teal);
   height: 100%;
-  font-family: "Poiret One", sans-serif;
-  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
   font-style: normal;
 }
 
@@ -41,6 +41,7 @@ body {
   text-decoration: none;
   color: var(--regular-white);
   margin-left: 10px;
+  font-weight: 300;
 }
 
 .div-logo {
@@ -62,22 +63,47 @@ body {
 }
 
 .main-logo-name {
-  max-width: 50%;
+  max-width: 80%;
   height: 40%;
 }
 
 .main {
   height: 100%;
   text-align: center;
+  padding-top: 30px;
+}
+
+.main-content {
+  width: 75%;
+  margin: auto;
 }
 
 .main-header {
   color: var(--emerald);
+  font-weight: 400;
 }
 
 .main-paragraph-description {
   color: var(--regular-white);
-  font-size: 20px;
+  font-size: 18px;
+}
+
+.button {
+  padding: 10px;
+  width: 50%;
+  margin: auto;
+  border-radius: 5px;
+  font-weight: 300;
+}
+
+.pink {
+  background-color: var(--bubblegum-pink);
+  color: var(--regular-white);
+}
+
+.emerald {
+  border: 1px var(--emerald) solid;
+  color: var(--emerald);
 }
 
 @media screen and (min-width: 768px) {}
