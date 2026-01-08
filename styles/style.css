@@ -1,10 +1,8 @@
 :root {
-  --font-size: 16px;
-
-  /* Custom Portfolio Colors */
   --bubblegum-pink: #ef476f;
   --golden-pollen: #ffd166;
   --emerald: #06d6a0;
+  --emerald-rgb: 6 214 160;
   --ocean-blue: #118ab2;
   --dark-teal: #073b4c;
   --regular-white: #FFFFFF;
@@ -20,7 +18,6 @@ html {
 }
 
 body {
-  background-color: var(--dark-teal);
   height: 100%;
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
@@ -29,12 +26,16 @@ body {
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #073b4c;
 }
 
 .nav {
   display: flex;
+
 }
 
 .nav-link {
@@ -59,12 +60,17 @@ body {
 }
 
 .nav-logo-img {
-  width: 60%;
+  width: 50%;
+  height: 60%;
+}
+
+.home {
+  background-color: var(--dark-teal);
 }
 
 .main-logo-name {
   max-width: 80%;
-  height: 40%;
+  height: 30%;
 }
 
 .main {
@@ -81,29 +87,45 @@ body {
 .main-header {
   color: var(--emerald);
   font-weight: 400;
+  font-size: x-large;
+  padding-bottom: 15px;
 }
 
 .main-paragraph-description {
   color: var(--regular-white);
   font-size: 18px;
+  padding-bottom: 15px;
 }
 
 .button {
   padding: 10px;
   width: 50%;
-  margin: auto;
+  margin: 18px auto;
   border-radius: 5px;
   font-weight: 300;
 }
 
-.pink {
+.pink-button {
   background-color: var(--bubblegum-pink);
   color: var(--regular-white);
 }
 
-.emerald {
+.emerald-button {
   border: 1px var(--emerald) solid;
   color: var(--emerald);
+}
+
+.teal-button {
+  border: 1px var(--dark-teal) solid;
+  color: var(--dark-teal);
+  width: 30%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.footer {
+  background-color: var(--emerald);
+  padding: 15px;
 }
 
 @media screen and (min-width: 768px) {}
