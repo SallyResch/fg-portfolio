@@ -14,7 +14,7 @@
 }
 
 html {
-  height: 100vh;
+  height: 100%;
 }
 
 body {
@@ -125,7 +125,7 @@ body {
 
 .footer {
   background-color: var(--emerald);
-  padding: 15px;
+  padding: 30px;
 }
 
 @media screen and (min-width: 768px) {}

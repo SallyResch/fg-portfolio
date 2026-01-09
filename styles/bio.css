@@ -3,21 +3,19 @@
     padding: 0;
 }
 
-.bio-image {
-    background-image: url("../images/desktop.png");
-    max-width: 1536px;
-    max-height: 100%;
-    background-position-x: center;
-    width: 100vw;
-    height: 100%;
-    margin: auto;
-}
-
 .bio-header {
-    padding-top: 20px;
+    padding: 20px 0;
     font-weight: 500;
     font-size: 42px;
-    background-color: rgb(var(--emerald-rgb) / 0.2);
-    margin: auto;
     color: var(--dark-teal);
+    background-color: rgb(var(--emerald-rgb) / 0.2);
+}
+
+.bio-image {
+    background-image: url("../images/desktop.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 60vh;
 }
