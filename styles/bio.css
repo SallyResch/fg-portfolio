@@ -19,3 +19,15 @@
     width: 100%;
     height: 60vh;
 }
+
+.my-story-section {
+    padding: 20px;
+}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 1024px) {}
+
+@media (min-width: 1280px) {}
+
+@media (min-width: 1536px) {}
