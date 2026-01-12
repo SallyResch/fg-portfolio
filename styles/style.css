@@ -1,0 +1,149 @@
+:root {
+  --bubblegum-pink: #ef476f;
+  --golden-pollen: #ffd166;
+  --emerald: #06d6a0;
+  --emerald-rgb: 6 214 160;
+  --ocean-blue: #118ab2;
+  --dark-teal: #073b4c;
+  --regular-white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #073b4c;
+}
+
+.nav {
+  display: flex;
+
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--regular-white);
+  margin-left: 10px;
+  font-weight: 300;
+}
+
+.div-logo {
+  margin: 10px;
+}
+
+.nav-logo {
+  border: var(--dark-teal) solid 1px;
+}
+
+.nav-logo:hover {
+  border-radius: 50%;
+  border: var(--golden-pollen) solid 1px;
+  background-color: #ffdc8a;
+}
+
+.nav-logo-img {
+  width: 50%;
+  height: 60%;
+}
+
+.home {
+  background-color: var(--dark-teal);
+}
+
+.main-logo-name {
+  max-width: 80%;
+  height: 30%;
+}
+
+.main {
+  height: 100%;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.main-content {
+  width: 75%;
+  margin: auto;
+}
+
+.main-header {
+  color: var(--emerald);
+  font-weight: 400;
+  font-size: x-large;
+  padding-bottom: 15px;
+}
+
+.main-paragraph-description {
+  color: var(--regular-white);
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+
+.button {
+  padding: 10px;
+  width: 50%;
+  margin: 18px auto;
+  border-radius: 5px;
+  font-weight: 300;
+}
+
+.pink-button {
+  background-color: var(--bubblegum-pink);
+  color: var(--regular-white);
+}
+
+.emerald-button {
+  border: 1px var(--emerald) solid;
+  color: var(--emerald);
+}
+
+.teal-button {
+  border: 1px var(--dark-teal) solid;
+  color: var(--dark-teal);
+  width: 30%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.footer {
+  background-color: var(--emerald);
+  padding: 30px;
+}
+
+@media (min-width: 768px) {
+  .main-logo-name {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-logo-name {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .main-logo-name {
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 1536px) {}

@@ -6,25 +6,57 @@
     <title>Portfolio | Sally Resch</title>
     <script type="module" src="./scripts/script.js"></script>
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
-      <div class="logo">
-        <a href="/index.html">
+      <div class="div-logo">
+        <a class="nav-logo" href="/index.html">
           <img
-            src="./images/SR-NAVLOGO.svg"
+            src="./images/nav-logo.svg"
             alt="logo"
             width="127"
             height="106"
+            class="nav-logo-img"
           />
         </a>
       </div>
-      <nav>
-        <a href="/skills.html">Skills</a>
-        <a href="/biography.html">Bio</a>
+      <nav class="nav">
+        <a class="nav-link" href="/skills.html"><p>Skills</p></a>
+        <a class="nav-link" href="/biography.html"><p>Bio</p></a>
+        <a class="nav-link" href="/projects.html"><p>Projects</p></a>
       </nav>
     </header>
-    <main class="main">MAIN HOME</main>
-    <footer class="footer">FOOTER</footer>
+    <main class="main home">
+      <div class="main-content">
+        <img
+          src="./images/main-logo-name.svg"
+          alt="logo for Sally Resch-page"
+          width="621"
+          height="689"
+          class="main-logo-name"
+        />
+        <h1 class="main-header">Frontend Developer</h1>
+        <p class="main-paragraph-description">
+          I craft beautiful, performant web experiences with the knowledge I
+          gain @FutureGames
+        </p>
+        <div class="buttons">
+          <div class="button pink-button">View My Work</div>
+          <div class="button emerald-button">Get In Touch</div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="button teal-button">Social media</div>
+      <div class="button teal-button">Social media</div>
+      <div class="button teal-button">Social media</div>
+      <p></p>
+    </footer>
   </body>
 </html>
