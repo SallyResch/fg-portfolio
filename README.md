@@ -1,117 +1,121 @@
-Självklart! Här är ett förslag på en **README.md** på svenska som du kan använda direkt i ditt GitHub-repo. Texten är anpassad för uppgiften och kan enkelt justeras med ditt namn, länkar och tekniska val.
+Developer Portfolio – Assignment 6
+📌 Project Description
 
----
+This project is the final individual assignment of the course and consists of a multi-page developer portfolio website. The portfolio presents me as a Front End Developer and also functions as a personal CV.
 
-# Developer Portfolio – Assignment 6
+The main purpose of this project is to showcase my technical skills, previous work, and ability to build responsive, accessible, and well-structured web applications. While education can open doors, a strong portfolio demonstrates real-world skills and practical experience.
 
-## 📌 Projektbeskrivning
+🗓 Deadline
 
-Detta projekt är den avslutande individuella uppgiften i kursen och består av ett **multipage portfolio-website**. Portfolion presenterar mig som **Front End Developer** och fungerar även som ett personligt CV.
+January 18th at 23:59
 
-Syftet med projektet är att visa upp mina tekniska kunskaper, tidigare projekt och min förmåga att bygga tillgängliga, responsiva och välstrukturerade webbapplikationer. Fokus ligger på att demonstrera praktiska färdigheter snarare än utbildningsbakgrund.
+🎯 Project Goals
 
----
+Build a professional developer portfolio for potential employers
 
-## 🗓 Deadline
+Showcase previous assignments and experiments from the course
 
-**18 januari kl. 23:59**
+Demonstrate knowledge of responsive design and accessibility
 
----
+Follow good coding practices
 
-## 🎯 Mål med projektet
+Use external libraries and the GitHub API for dynamic content
 
-* Skapa en professionell portfolio som kan visas för potentiella arbetsgivare
-* Samla och presentera tidigare kursuppgifter och experiment
-* Visa förståelse för responsiv design, tillgänglighet och god kodpraxis
-* Implementera externa bibliotek och GitHub API för dynamiskt innehåll
+🧩 Portfolio Content
 
----
+The portfolio includes multiple pages/sections, such as:
 
-## 🧩 Innehåll
+Home / Bio – A short personal presentation
 
-Portfolion består av flera sidor/sektioner, bland annat:
+Projects
 
-* **Startsida / Bio** – Kort presentation av mig själv
-* **Projekt**
+An “All Projects” overview page
 
-  * “All Projects”-sida med översikt
-  * Individuella projektsidor med beskrivning
-  * Länkar till GitHub-repo och deployad version
-* **Skills** – Presentation av mina tekniska färdigheter
-* **Kontakt** – Kontaktuppgifter samt ett fungerande kontaktformulär
+Individual project pages with descriptions
 
----
+Links to GitHub repositories and deployed versions
 
-## ✅ Krav för Godkänt (G)
+Skills – A presentation of my technical skills
 
-Portfolion uppfyller följande krav:
+Contact – Contact information and a functional contact form
 
-* Innehåller en bild på mig
-* Presentation av tekniska kunskaper
-* Presentation av projekt med länkar till:
+✅ Passing Requirements (Godkänt)
 
-  * GitHub-repository
-  * Deployad version
-* Tydlig kontaktmöjlighet
-* Header, footer och navigationsmeny på alla huvudsidor
-* Responsiv design (320px – 1600px)
-* Tillgänglighetsanpassad enligt riktlinjer:
+This portfolio meets the following requirements:
 
-  * Minst **95 i Lighthouse-score**
-  * Alla bilder har `alt`-attribut
-  * God färgkontrast
-  * Semantisk HTML och god kodpraxis
+Includes a picture of me
 
----
+Presentation of my technical skills
 
-## 🌟 Krav för Välgodkänt (VG)
+Presentation of projects with links to:
 
-Utöver kraven för Godkänt har projektet även:
+GitHub repositories
 
-* Användning av minst ett externt bibliotek
-  *(ex. animationer, fade/slide-effekter, toggle-funktioner etc.)*
-* En favicon
-* Dynamisk hämtning av projekt via **GitHub API**
+Deployed versions
 
-### GitHub API
+A clear way to contact me
 
-Projekt hämtas automatiskt från mitt GitHub-konto via:
+Header, footer, and navigation menu on all main pages
 
-```
+Fully responsive design (320px – 1600px)
+
+Follows accessibility guidelines:
+
+At least 95 Lighthouse score
+
+All images include proper alt attributes
+
+Good color contrast
+
+Semantic HTML and clean, structured code
+
+🌟 High Passing Requirements (Välgodkänt)
+
+In addition to the passing requirements, this project also includes:
+
+Use of at least one external library
+(e.g. animations, fade/slide effects, toggling content, etc.)
+
+A favicon
+
+Dynamic fetching of public repositories using the GitHub API
+
+GitHub API Usage
+
+Public repositories are fetched from GitHub using:
+
 https://api.github.com/users/YourGitHubProfile/repos
-```
 
-Detta gör att portfolion alltid är uppdaterad med mina senaste publika repositories.
 
----
+This ensures the portfolio stays automatically updated with my latest projects.
 
-## 🛠️ Tekniker & Verktyg
+🛠️ Technologies Used
 
-Exempel på tekniker som används i projektet:
+HTML5
 
-* HTML5
-* CSS3 / SCSS
-* JavaScript (ES6+)
-* Externt JavaScript-bibliotek
-* Git & GitHub
-* GitHub API
-* Lighthouse (tillgänglighet & prestanda)
+CSS3
 
----
+JavaScript (ES6+)
 
-## 📤 Inlämning
+External JavaScript libraries
 
-Projektet lämnas in med:
+Git & GitHub
 
-* 🔗 **Länk till GitHub-repository:**
-  *(lägg till din länk här)*
+GitHub API
 
-* 🌍 **Länk till deployad site (GitHub Pages / Netlify):**
-  *(lägg till din länk här)*
+Lighthouse (performance & accessibility testing)
 
----
+📤 Submission
 
-## 👤 Författare
+The project is submitted with:
 
-**Sally Resch**
+🔗 Link to GitHub Repository:
+(https://github.com/SallyResch/fg-portfolio
+
+🌍 Link to Deployed Site (Vercel):
+https://fg-portfolio-two.vercel.app/
+
+👤 Author
+
+Sally Resch
 Front End Developer
