@@ -26,6 +26,10 @@ body {
   flex-direction: column;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header {
   display: flex;
   justify-content: space-evenly;
@@ -37,7 +41,6 @@ body {
 
 .nav {
   display: flex;
-
 }
 
 .nav-link {
@@ -148,4 +151,12 @@ body {
   }
 }
 
-@media (min-width: 1536px) {}
+@media (min-width: 1536px) {
+  .main-logo-name {
+    max-width: 30%;
+  }
+
+  .button {
+    width: 20%;
+  }
+}
