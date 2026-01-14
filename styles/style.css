@@ -159,4 +159,8 @@ a {
   .button {
     width: 20%;
   }
+
+  .main {
+    padding: 45px;
+  }
 }

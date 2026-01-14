@@ -34,7 +34,7 @@ const fetchRepos = async () => {
 
 fetchRepos();
 
-const starredProjectsContainer = document.querySelector(".starred-projects");
+/*const starredProjectsContainer = document.querySelector(".starred-projects");
 const fetchStarredRepos = async () => {
     try {
         const response = await fetch(
@@ -67,4 +67,4 @@ const fetchStarredRepos = async () => {
     }
 };
 
-fetchStarredRepos();
+fetchStarredRepos();*/
