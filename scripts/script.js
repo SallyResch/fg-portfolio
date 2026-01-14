@@ -1,21 +1,21 @@
 const projectsContainer = document.querySelector(".projects");
 
 const fetchRepos = async () => {
-    try {
-        const response = await fetch(
-            "https://api.github.com/users/SallyResch/repos"
-        );
+  try {
+    const response = await fetch(
+      "https://api.github.com/users/SallyResch/repos"
+    );
 
-        if (!response.ok) {
-            throw new Error("Something went wrong");
-        }
+    if (!response.ok) {
+      throw new Error("Something went wrong");
+    }
 
-        const repos = await response.json();
+    const repos = await response.json();
 
-        repos
-            .filter(repo => !repo.fork)
-            .forEach(repo => {
-                projectsContainer.innerHTML += `
+    repos
+      .filter(repo => !repo.fork)
+      .forEach(repo => {
+        projectsContainer.innerHTML += `
           <article class="project-card">
             <img
             src="./images/ac2eea7ff7c76aff36c2e7a090f7018f.png"
@@ -31,12 +31,12 @@ const fetchRepos = async () => {
             </a>
           </article>
         `;
-            });
+      });
 
-    } catch (error) {
-        console.error(error);
-        projectsContainer.innerHTML = "<p>Could not load projects.</p>";
-    }
+  } catch (error) {
+    console.error(error);
+    projectsContainer.innerHTML = "<p>Could not load projects.</p>";
+  }
 };
 
 fetchRepos();
