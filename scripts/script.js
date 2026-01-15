@@ -1,10 +1,64 @@
 const projectsContainer = document.querySelector(".projects");
 
-const fetchRepos = async () => {
+const reposApi =
+  "https://api.github.com/users/SallyResch/repos";
+const repoLanguagesApi =
+  "https://api.github.com/repos/SallyResch/{repo}/languages";
+
+
+const fetchRepoLanguages = async (repoName) => {
   try {
     const response = await fetch(
-      "https://api.github.com/users/SallyResch/repos"
+      repoLanguagesApi.replace("{repo}", repoName)
     );
+
+    if (!response.ok) {
+      throw new Error("Could not fetch languages");
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Language fetch error:", error);
+    return {};
+  }
+};
+
+const renderProject = (repo, languages) => {
+  const languageList = Object.keys(languages);
+
+  projectsContainer.innerHTML += `
+    <article class="project-card">
+      <img
+        src="./images/ac2eea7ff7c76aff36c2e7a090f7018f.png"
+        alt="picture of girl coding"
+        width="1024"
+        height="1024"
+        class="coding-picture"
+      />
+
+      <h3>${repo.name}</h3>
+      <p>Description:</p>
+      <p>${repo.description || "No description available."}</p>
+
+      <div class="languages">
+      <h4>Languages</h4>
+        ${languageList.length
+      ? languageList
+        .map(lang => `<span class="language-tag"> ${lang}</span>`)
+      : "<p>No languages found</p>"
+    }
+      </div>
+
+      <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">
+        GitHub Link
+      </a>
+    </article>
+  `;
+};
+
+const fetchRepos = async () => {
+  try {
+    const response = await fetch(reposApi);
 
     if (!response.ok) {
       throw new Error("Something went wrong");
@@ -12,27 +66,12 @@ const fetchRepos = async () => {
 
     const repos = await response.json();
 
-    repos
-      .filter(repo => !repo.fork)
-      .forEach(repo => {
-        projectsContainer.innerHTML += `
-          <article class="project-card">
-            <img
-            src="./images/ac2eea7ff7c76aff36c2e7a090f7018f.png"
-            alt="picture of girl coding"
-            width="1024"
-            hight="1024"
-            class="coding-picture"
-            />
-            <h3>${repo.name}</h3>
-            <p>${repo.description || "No description available."}</p>
-            <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">
-              GitHub Link
-            </a>
-          </article>
-        `;
-      });
+    const filteredRepos = repos.filter(repo => !repo.fork);
 
+    for (const repo of filteredRepos) {
+      const languages = await fetchRepoLanguages(repo.name);
+      renderProject(repo, languages);
+    }
   } catch (error) {
     console.error(error);
     projectsContainer.innerHTML = "<p>Could not load projects.</p>";
@@ -40,38 +79,3 @@ const fetchRepos = async () => {
 };
 
 fetchRepos();
-
-/*const starredProjectsContainer = document.querySelector(".starred-projects");
-const fetchStarredRepos = async () => {
-    try {
-        const response = await fetch(
-            "https://api.github.com/users/SallyResch/starred"
-        );
-
-        if (!response.ok) {
-            throw new Error("Something went wrong");
-        }
-
-        const repos = await response.json();
-
-        repos
-            .filter(repo => !repo.fork)
-            .forEach(repo => {
-                starredProjectsContainer.innerHTML += `
-          <article class="project">
-            <h3>${repo.name}</h3>
-            <p>${repo.description || "No description available."}</p>
-            <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
-          </article>
-        `;
-            });
-
-    } catch (error) {
-        console.error(error);
-        projectsContainer.innerHTML = "<p>Could not load projects.</p>";
-    }
-};
-
-fetchStarredRepos();*/
