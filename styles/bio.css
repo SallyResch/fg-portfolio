@@ -1,57 +1,72 @@
 .bio {
-    background-color: var(--regular-white);
-    padding: 0;
+  background-color: var(--regular-white);
+  padding: 0;
 }
 
 .bio-header {
-    padding: 20px 0;
-    font-weight: 500;
-    font-size: 42px;
-    color: var(--dark-teal);
-    background-color: rgb(var(--emerald-rgb) / 0.2);
+  padding: 20px 0;
+  font-weight: 500;
+  font-size: 42px;
+  color: var(--dark-teal);
+  background-color: rgb(var(--emerald-rgb) / 0.2);
 }
 
 .bio-image {
-    background-image: url("../images/desktop.webp");
-    background-size: cover;
-    background-position: left;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 90vh;
+  background-image: url("../images/desktop.webp");
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 90vh;
 }
 
 .my-story-section {
-    padding: 20px;
-    background-color: var(--golden-pollen);
+  padding: 20px;
+  background-color: var(--golden-pollen);
 }
 
 .profile-picture {
-    width: 50%;
-    height: 50%;
+  width: 50%;
+  height: 50%;
 }
 
 .contact-section {
-    background-color: var(--dark-teal);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: var(--dark-teal);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-form {
-    background-color: var(--regular-white);
-    border-radius: 5px;
-    padding: 20px;
+  background-color: var(--regular-white);
+  border-radius: 5px;
+  padding: 20px;
 }
 
 .fieldset {
-    border: 0;
+  border: 0;
 }
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+  .profile-picture {
+    width: 30%;
+    height: 30%;
+  }
+}
 
 @media (min-width: 1024px) {}
 
-@media (min-width: 1280px) {}
+@media (min-width: 1280px) {
+  .profile-picture {
+    width: 20%;
+    height: 20%;
+  }
+}
 
-@media (min-width: 1536px) {}
+@media (min-width: 1536px) {
+  .profile-picture {
+    width: 15%;
+    height: 15%;
+  }
+}
