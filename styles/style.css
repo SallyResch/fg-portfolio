@@ -6,6 +6,7 @@
   --ocean-blue: #118ab2;
   --dark-teal: #073b4c;
   --regular-white: #FFFFFF;
+  --regular-black: #000000;
 }
 
 @font-face {
@@ -126,11 +127,13 @@ a {
 
 .pink-button {
   background-color: var(--bubblegum-pink);
-  color: var(--regular-white);
+  color: var(--regular-black);
+  font-weight: 500;
 }
 
 .emerald-button {
   border: 1px var(--emerald) solid;
+  font-weight: 500;
   color: var(--emerald);
 }
 
@@ -146,6 +149,7 @@ a {
   background-color: var(--emerald);
   padding: 30px;
   text-align: center;
+  font-size: x-large;
 }
 
 @media (min-width: 768px) {
