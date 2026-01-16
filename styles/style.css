@@ -8,6 +8,22 @@
   --regular-white: #FFFFFF;
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("./Montserrat/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("./Montserrat/Montserrat-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -91,7 +107,6 @@ a {
 .main-header {
   color: var(--emerald);
   font-weight: 400;
-  font-size: x-large;
   padding-bottom: 15px;
 }
 
