@@ -98,6 +98,7 @@ a {
 .main {
   text-align: center;
   padding-top: 30px;
+  height: 100%;
 }
 
 .main-content {
