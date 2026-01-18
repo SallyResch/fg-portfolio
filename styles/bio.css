@@ -20,14 +20,30 @@
   height: 90vh;
 }
 
+.bio-secondary-header {
+  color: var(--dark-teal);
+  font-size: xx-large;
+  font-weight: 500;
+}
+
 .my-story-section {
   padding: 20px;
-  background-color: var(--golden-pollen);
+  background-color: var(--light-golden-pollen);
 }
 
 .profile-picture {
   width: 50%;
   height: 50%;
+}
+
+.timeline-div {
+  margin: 30px auto;
+  border-left: 1px solid var(--dark-teal);
+}
+
+.point-in-time {
+  text-align: start;
+  height: 30px;
 }
 
 .contact-section {
