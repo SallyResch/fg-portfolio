@@ -47,60 +47,9 @@
         <div class="timeline-div">timeline goes here</div>
       </section>
       <section class="contact-section">
-        <h2 class="main-header contact-header">Send a Message</h2>
-        <form
-          action="mailto:sallyresch27@gmail.com"
-          method="POST"
-          enctype="text/plain"
-          class="contact-form"
-        >
-          <fieldset class="fieldset">
-            <legend>Personal Info</legend>
-            <div class="user-input">
-              <label for="first-name">Name</label>
-              <input
-                type="text"
-                name="first-name"
-                id="first-name"
-                required
-                placeholder="Your Name"
-              />
-            </div>
-            <div class="user-input">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                required
-                placeholder="user@email.com"
-              />
-            </div>
-          </fieldset>
-          <fieldset class="fieldset">
-            <legend>Choose type of message</legend>
-            <label for="messagetype">Type:</label>
-            <select name="messagetype" id="messagetype">
-              <option value="company">Company</option>
-              <option value="private">Private</option>
-            </select>
-          </fieldset>
-          <fieldset class="fieldset">
-            <label for="description">Your message</label>
-            <div class="user-input">
-              <textarea
-                class="description"
-                name="description"
-                id="description"
-              ></textarea>
-            </div>
-            <div class="user-input-checkbox">
-              <label for="ok">Click to agree</label>
-              <input type="checkbox" name="ok" id="ok" value="ok" required />
-            </div>
-          </fieldset>
-          <button class="button pink-button" type="submit">Send info</button>
-        </form>
+        <a href="mailto:sallyresch27@gmail.com" class="mail-link">
+          Contact Me (by mail)
+        </a>
       </section>
     </main>
     <footer class="footer">

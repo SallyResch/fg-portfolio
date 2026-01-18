@@ -1,0 +1,22 @@
+.skills-header {
+    color: var(--dark-teal);
+    font-weight: 500;
+}
+
+.skills-paragraph {
+    min-width: 300px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.skills-div {
+    margin-top: 20px;
+}
+
+.skill {
+    border: var(--golden-pollen) 1px solid;
+    min-width: 300px;
+    text-align: start;
+    padding: 15px;
+    border-radius: 3px;
+}
