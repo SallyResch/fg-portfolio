@@ -8,7 +8,6 @@
 }
 
 .skills-paragraph {
-  min-width: 300px;
   max-width: 500px;
   margin: auto;
   font-weight: 300;
@@ -21,7 +20,7 @@
 
 .skill {
   border: var(--dark-teal) 1px solid;
-  min-width: 300px;
+  max-width: 600px;
   text-align: start;
   padding: 15px;
   border-radius: 3px;

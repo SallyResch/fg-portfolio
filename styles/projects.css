@@ -1,24 +1,32 @@
 .project-header {
-    color: var(--dark-teal);
+  color: var(--dark-teal);
 }
 
 .project {
-    min-height: 100%;
+  min-height: 100%;
 }
 
 .projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 20px auto;
 }
 
 .project-card {
-    background: #fff;
-    border-radius: 1rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  background: var(--regular-white);
+  border-radius: 5px;
 }
 
 .project-card:hover {
-    transform: translateY(-4px);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.description-header {
+  font-weight: 500;
+}
+
+.featured-projects {
+  margin: 40px auto;
 }
