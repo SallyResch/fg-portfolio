@@ -2,6 +2,10 @@
     color: var(--dark-teal);
 }
 
+.project {
+    min-height: 100%;
+}
+
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
