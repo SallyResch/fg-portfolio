@@ -1,22 +1,44 @@
+.skills {
+  height: 100%;
+}
+
 .skills-header {
-    color: var(--dark-teal);
-    font-weight: 500;
+  color: var(--dark-teal);
+  font-weight: 500;
 }
 
 .skills-paragraph {
-    min-width: 300px;
-    max-width: 500px;
-    margin: auto;
+  min-width: 300px;
+  max-width: 500px;
+  margin: auto;
 }
 
 .skills-div {
-    margin-top: 20px;
+  max-width: 600px;
+  margin: 40px auto;
 }
 
 .skill {
-    border: var(--golden-pollen) 1px solid;
-    min-width: 300px;
-    text-align: start;
-    padding: 15px;
-    border-radius: 3px;
+  border: var(--dark-teal) 1px solid;
+  min-width: 300px;
+  text-align: start;
+  padding: 15px;
+  border-radius: 3px;
+  margin: 20px auto;
+}
+
+.hide {
+  display: none;
+}
+
+.language,
+.databases {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.language:hover,
+.databases:hover {
+  text-decoration: dotted;
+  color: var(--dark-teal);
 }
