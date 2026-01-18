@@ -31,11 +31,11 @@
 }
 
 html {
-  height: 100vh;
+  min-height: 100%;
 }
 
 body {
-  height: 100vh;
+  min-height: 100%;
   font-family: "Montserrat", sans-serif;
   font-weight: 200;
   font-style: normal;
@@ -91,14 +91,14 @@ a {
 }
 
 .main-logo-name {
-  max-width: 80%;
+  max-width: 90%;
   height: 30%;
 }
 
 .main {
   text-align: center;
-  padding-top: 30px;
-  height: 100%;
+  padding: 40px;
+  flex: 1;
 }
 
 .main-content {
