@@ -27,18 +27,10 @@ const renderProject = (repo, languages) => {
   const languageList = Object.keys(languages);
 
   projectsContainer.innerHTML += `
-    <article class="project-card">
-      <img
-        src="./images/ac2eea7ff7c76aff36c2e7a090f7018f.png"
-        alt="picture of girl coding"
-        width="1024"
-        height="1024"
-        class="coding-picture"
-      />
-
-      <h3>${repo.name}</h3>
-      <p>Description:</p>
-      <p>${repo.description || "No description available."}</p>
+  <article class="project-card">
+  <h3>${repo.name}</h3>
+  <p>Description:</p>
+  <p>${repo.description || "No description available."}</p>
 
       <div class="languages">
       <h4>Languages</h4>
