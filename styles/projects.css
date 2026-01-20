@@ -13,7 +13,7 @@
 }
 
 .project-card {
-  background-color: var(--light-golden-pollen);
+  background-color: var(--golden-pollen);
   border-radius: 12px;
   padding: 1.5rem;
   text-align: left;
@@ -60,7 +60,6 @@
 }
 
 .project-card a {
-  margin-top: auto;
   font-weight: 500;
   color: var(--ocean-blue);
 }
