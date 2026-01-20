@@ -26,19 +26,16 @@ const fetchRepoLanguages = async (repoName) => {
 const renderProject = (repo, languages) => {
   const languageList = Object.keys(languages);
 
-  const homepageLink = repo.homepage
-    ? `<a href="${repo.homepage}" target="_blank" rel="noopener noreferrer">
-         Website
-       </a>`
-    : "";
-
   projectsContainer.innerHTML += `
     <article class="project-card">
+            <iframe
+            src=${repo.homepage}
+            frameborder="1"
+            scrolling="no"
+          ></iframe>
       <h3>${repo.name}</h3>
-
       <p>Description:</p>
       <p>${repo.description || "No description available."}</p>
-
       <div class="languages">
         <h4>Languages</h4>
         ${languageList.length
@@ -48,11 +45,11 @@ const renderProject = (repo, languages) => {
       : "<p>No languages found</p>"
     }
       </div>
-
-      ${homepageLink}
-
+      <a href="${repo.homepage}" target="_blank" rel="noopener noreferrer">
+        Website
+      </a>
       <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer">
-        GitHub Link
+        GitHub Repo
       </a>
     </article>
   `;

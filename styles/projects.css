@@ -2,10 +2,6 @@
   color: var(--dark-teal);
 }
 
-.project {
-  min-height: 100%;
-}
-
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -16,6 +12,10 @@
 .project-card {
   background: var(--regular-white);
   border-radius: 5px;
+  margin: 20px;
+  border: 1px solid var(--dark-teal);
+  text-align: start;
+  padding: 20px;
 }
 
 .project-card:hover {
@@ -28,5 +28,8 @@
 }
 
 .featured-projects {
-  margin: 40px auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 50%;
+  margin: auto;
 }
