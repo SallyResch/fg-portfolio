@@ -37,13 +37,12 @@
 }
 
 .timeline-div {
-  margin: 30px auto;
   border-left: 1px solid var(--dark-teal);
 }
 
 .point-in-time {
   text-align: start;
-  height: 30px;
+  margin: 20px;
 }
 
 .contact-section {
