@@ -107,7 +107,9 @@ a {
 }
 
 .main-content {
-  width: 75%;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
   margin: auto;
 }
 
@@ -161,6 +163,10 @@ a {
 @media (min-width: 768px) {
   .main-logo-name {
     max-width: 60%;
+  }
+
+  .main-content {
+    padding: 0 2rem;
   }
 }
 

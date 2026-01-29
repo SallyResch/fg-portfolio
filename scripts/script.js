@@ -1,10 +1,6 @@
-const projectsContainer = document.querySelector(".projects");
-
-const reposApi =
-  "https://api.github.com/users/SallyResch/repos";
-
-const repoLanguagesApi =
-  "https://api.github.com/repos/SallyResch/{repo}/languages";
+const reposApi = "https://api.github.com/users/SallyResch/repos";
+const repoLanguagesApi = "https://api.github.com/repos/SallyResch/{repo}/languages";
+const projectsContainer = document.querySelector(".github-projects");
 
 const fetchRepos = async () => {
   try {
