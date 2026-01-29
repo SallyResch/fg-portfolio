@@ -19,10 +19,21 @@
   border-radius: 10px;
 }
 
+.project-card-header {
+  margin: 10px 0;
+}
+
 .website-link {
   background-color: var(--dark-teal);
   font-weight: 500;
   color: var(--regular-white);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.text-div {
+  text-align: start;
+  margin-top: 30px;
 }
 
 @media (min-width: 768px) {
