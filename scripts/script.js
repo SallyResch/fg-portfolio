@@ -1,48 +1,64 @@
-const reposApi = "https://api.github.com/users/SallyResch/repos";
-const repoLanguagesApi = "https://api.github.com/repos/SallyResch/{repo}/languages";
-const projectsContainer = document.querySelector(".github-projects");
+const githubRepoApi = "https://api.github.com/users/SallyResch/repos";
+const githubRepoContainer = document.querySelector(".github-projects");
 
 const fetchRepos = async () => {
   try {
-    const response = await fetch(reposApi);
-
+    const response = await fetch(githubRepoApi);
     if (!response.ok) {
       throw new Error("Something went wrong");
     }
 
     const repos = await response.json();
 
-    const filteredRepos = repos.filter(repo => !repo.fork);
-
-    for (const repo of filteredRepos) {
-      const languages = await fetchRepoLanguages(repo.name);
-      renderProject(repo, languages);
-    }
-  } catch (error) {
-    console.error(error);
-    projectsContainer.innerHTML = "<p>Could not load projects.</p>";
-  }
-};
-fetchRepos();
-
-
-const fetchRepoLanguages = async (repoName) => {
-  try {
-    const response = await fetch(
-      repoLanguagesApi.replace("{repo}", repoName)
+    const reposWithHomepage = repos.filter(
+      repo => repo.homepage && repo.homepage.trim() !== ""
     );
 
-    if (!response.ok) {
-      throw new Error("Could not fetch languages");
-    }
-
-    return await response.json();
+    renderRepos(reposWithHomepage);
   } catch (error) {
-    console.error("Language fetch error:", error);
-    return {};
+    githubRepoContainer.innerHTML = "<p>Could not load repositories from GitHub</p>";
   }
-};
+}
+fetchRepos();
 
-const renderProject = (repo, languages) => {
+const renderRepos = (repos) => {
+  githubRepoContainer.innerHTML = "";
 
-};
+  repos.forEach(repo => {
+    const projectCard = document.createElement("div");
+    projectCard.classList.add("project-card");
+
+    const iframe = document.createElement("iframe");
+    iframe.src = repo.homepage;
+    iframe.setAttribute("frameborder", "1");
+    iframe.setAttribute("scrolling", "no");
+
+    const textDiv = document.createElement("div");
+    textDiv.classList.add("text-div");
+
+    textDiv.innerHTML = `
+      <h3>${repo.name}</h3>
+
+      <a
+        class="website-link"
+        href="${repo.homepage}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Go to Website
+      </a>
+
+      <h4 class="project-card-header">Description:</h4>
+      <p class="description">
+        ${repo.description || "No description provided."}
+      </p>
+
+      <h4 class="project-card-header">Language</h4>
+      <p>${repo.language || "Not specified"}</p>
+    `;
+
+    projectCard.appendChild(iframe);
+    projectCard.appendChild(textDiv);
+    githubRepoContainer.appendChild(projectCard);
+  });
+}
