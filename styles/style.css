@@ -55,8 +55,9 @@ a {
 
 .header {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  padding: 20px;
   position: sticky;
   top: 0;
   background-color: #073b4c;
@@ -71,19 +72,17 @@ a {
   color: var(--regular-white);
   margin-left: 10px;
   font-weight: 300;
+
 }
 
-.div-logo {
-  margin: 10px;
+.nav-link:hover {
+  animation: bounce;
+  animation-duration: 0.5s;
 }
 
-.nav-logo {
-  border: var(--dark-teal) solid 1px;
-}
 
 .nav-logo:hover {
   border-radius: 50%;
-  border: var(--golden-pollen) solid 1px;
   background-color: #ffdc8a;
 }
 
