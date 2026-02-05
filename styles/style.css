@@ -57,9 +57,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 20px;
-  padding-top: 20px;
-  padding-right: 20px;
+  padding: 20px;
   position: sticky;
   top: 0;
   background-color: #073b4c;
@@ -82,16 +80,10 @@ a {
   animation-duration: 0.5s;
 }
 
-.nav-logo {
-  border: var(--dark-teal) solid 1px;
-}
 
 .nav-logo:hover {
   border-radius: 50%;
-  border: var(--golden-pollen) solid 1px;
   background-color: #ffdc8a;
-  animation: headshake;
-  animation-duration: 0.5s;
 }
 
 .nav-logo-img {
