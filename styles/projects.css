@@ -50,8 +50,14 @@ iframe {
 
 @media (min-width: 768px) {
 
-  .featured-projects,
+  .featured-projects {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
   .github-projects {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 }
