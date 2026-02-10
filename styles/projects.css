@@ -1,9 +1,12 @@
-.featured-projects,
-.github-projects {
+.featured-projects {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
   margin: 2rem 0;
+}
+
+.github-projects .project-card {
+  margin-bottom: 20px;
 }
 
 .project-card {
@@ -15,12 +18,17 @@
 
 .project-card iframe {
   width: 100%;
-  height: 200px;
+  max-width: 100%;
   border-radius: 10px;
 }
 
 .project-card-header {
   margin: 10px 0;
+  padding-right: 20px;
+}
+
+iframe {
+  min-width: 0;
 }
 
 .website-link {
@@ -31,6 +39,10 @@
   padding: 5px;
 }
 
+.description {
+  width: 90%;
+}
+
 .text-div {
   text-align: start;
   margin-top: 30px;
@@ -38,8 +50,14 @@
 
 @media (min-width: 768px) {
 
-  .featured-projects,
+  .featured-projects {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
   .github-projects {
+    display: grid;
+    gap: 2rem;
+    margin: 2rem 0;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 }
