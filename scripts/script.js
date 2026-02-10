@@ -3,6 +3,8 @@ const githubRepoContainer = document.querySelector(".github-projects");
 
 const fetchRepos = async () => {
   try {
+    githubRepoContainer.innerHTML = "<p>Loading projects...</p>";
+
     const response = await fetch(githubRepoApi);
     if (!response.ok) {
       throw new Error("Something went wrong");
@@ -16,20 +18,22 @@ const fetchRepos = async () => {
 
     renderRepos(reposWithHomepage);
   } catch (error) {
-    githubRepoContainer.innerHTML = "<p>Could not load repositories from GitHub</p>";
+    githubRepoContainer.innerHTML =
+      "<p>Could not load repositories from GitHub</p>";
   }
-}
-fetchRepos();
+};
 
 const renderRepos = (repos) => {
   githubRepoContainer.innerHTML = "";
 
-  repos.forEach(repo => {
+  repos.forEach((repo) => {
     const projectCard = document.createElement("div");
     projectCard.classList.add("project-card");
+    projectCard.setAttribute("tabindex", "0");
 
     const iframe = document.createElement("iframe");
     iframe.src = repo.homepage;
+    iframe.loading = "lazy";
     iframe.setAttribute("frameborder", "1");
     iframe.setAttribute("scrolling", "no");
 
@@ -37,7 +41,7 @@ const renderRepos = (repos) => {
     textDiv.classList.add("text-div");
 
     textDiv.innerHTML = `
-      <h3>${repo.name}</h3>
+      <h3 class="project-card-header">${repo.name}</h3>
 
       <a
         class="website-link"
@@ -57,8 +61,26 @@ const renderRepos = (repos) => {
       <p>${repo.language || "Not specified"}</p>
     `;
 
+    projectCard.addEventListener("click", () => {
+      document
+        .querySelectorAll(".project-card")
+        .forEach(card => card.classList.remove("active"));
+
+      projectCard.classList.add("active");
+    });
+
+    projectCard.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        projectCard.click();
+      }
+    });
+
     projectCard.appendChild(iframe);
     projectCard.appendChild(textDiv);
     githubRepoContainer.appendChild(projectCard);
   });
+};
+
+if (githubRepoContainer) {
+  fetchRepos();
 }
