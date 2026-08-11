@@ -5,6 +5,10 @@
   margin: 2rem 0;
 }
 
+.project-header {
+  margin-bottom: 20px;
+}
+
 .github-projects .project-card {
   margin-bottom: 20px;
 }
@@ -37,6 +41,8 @@ iframe {
   color: var(--regular-white);
   border-radius: 10px;
   padding: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .description {
